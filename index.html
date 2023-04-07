@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
+    <title>Static Template</title> 
+    <style> 
+      h1,
+      h2 { 
+        background: #ccc; 
+        height: 0; 
+        overflow: hidden; 
+        transition: 2s ease-in-out; 
+      } 
+
+      input:checked + h1 { 
+        height: 100px; 
+      } 
+
+      input:checked + h2 {
+        height: 200px;
+      }
+
+      nav {
+        background: #ccc;
+        height: 0;
+        width: 900px;
+        overflow: hidden; /*Что делает это свойсвво? */
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      input:checked + nav {
+        height: 200px;
+        transition: 2s ease-in-out;
+      }
+
+    </style> 
+  </head> 
+  <body> 
+    <label for="toggle">toggle</label> 
+    <input type="checkbox" id="toggle"/>
+    <h1> 
+      This is a static template, there is no bundler or bundling involved! 
+    </h1>
+
+    <label for="toggle-2">toggle-2</label> 
+    <input type="checkbox" id="toggle-2"/>
+
+    <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut harum nesciunt dolore libero laboriosam voluptate enim, quibusdam odio ipsam quis, cupiditate optio ex excepturi?</h2>
+    
+    <label for="menu-1">Burger menu X</label> 
+    <input type="checkbox" id="menu-1"/>
+
+    <nav>
+      <ul>
+        <li><a href="">Menu</a></li>
+        <li>About us</li>
+        <li>Contacts</li>
+      </ul>
+    </nav>
+    
+  </body> 
+</html>
